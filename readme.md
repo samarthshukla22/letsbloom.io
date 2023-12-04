@@ -9,6 +9,7 @@ This is a simple Flask API for managing a library's book inventory. The API allo
    ```bash
    pip install Flask mysql-connector-python
 Create a MySQL database named library with the following table:
+   ```bash
 CREATE TABLE books (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
@@ -16,8 +17,9 @@ CREATE TABLE books (
     genre VARCHAR(255),
     UNIQUE KEY (title, author)
 );
+  
 2. Update the db_config dictionary in the app.py file with your MySQL database credentials.
-   python app.py
+  ``` bash python app.py
   The API will run on http://127.0.0.1:5000/ by default.
  Endpoints
   1. Get All Books
